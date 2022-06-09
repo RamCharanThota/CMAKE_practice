@@ -1,4 +1,7 @@
 cmake_minimum_required(VERSION 3.0)
-project(complexproject)
-add_subdirectory(somelib)
-add_subdirectory(someexe)
+
+project(searchsourcefile)
+file(GLOB sourcefiles
+         "src/*.hpp"
+         "src/*.cpp")
+add_executable(hello ${sourcefiles})
